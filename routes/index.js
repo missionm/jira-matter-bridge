@@ -137,6 +137,7 @@ router.get('/hooks/:hookid', function(req, res, next) {
 
 router.post('/hooks/:hookid', function(req, res, next) {
     console.log("Received update from JIRA");
+    console.log(req);
     var hookId = req.params.hookid;
     var webevent = req.body.webhookEvent;
     var issueID = req.body.issue.key;
